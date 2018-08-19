@@ -8,10 +8,47 @@ import java.io.File;
 import java.io.FileInputStream;
 import java.io.FileOutputStream;
 import java.io.IOException;
+import java.io.InputStream;
+import java.io.OutputStream;
 import java.util.ArrayList;
 
 public class FileUtils {
     private static final String TAG = FileUtils.class.getSimpleName();
+
+    /**
+     * 拷贝文件
+     * @param source
+     * @param dest
+     * @return 成功与否
+     * @throws IOException
+     */
+    public static boolean copyFile(String source, String dest) throws IOException {
+
+        File fSource = new File(source);
+        File fDest = new File(dest);
+        if (!fSource.exists()){
+            Log.d(TAG, source + " not exist!");
+            return false;
+        }
+        String parent = fDest.getParent();
+        File fParent = new File(parent);
+        // 目标父目录不存在就新建
+        if (!fParent.exists()){
+            fParent.mkdirs();
+        }
+
+        InputStream is = new FileInputStream(source);
+        OutputStream os = new FileOutputStream(dest);
+
+        byte[] bytes = new byte[1024];
+        int nRead = -1;
+        while((nRead = is.read(bytes)) > 0){
+            os.write(bytes, 0, nRead);
+        }
+        os.close();
+        is.close();
+        return true;
+    }
 
     /**
      * 写入数据到文件
