@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <!--权限申请相关-->
+    <color name="st_bg_common_master_blue">#ff499ef0</color>
+    <color name="st_bg_common_master_blue_pressed">#4d499ef0</color>
+    <color name="st_text_minor_master_blue">#64499ef0</color>
+    <color name="white_FFFFFFFF">#FFFFFFFF</color>
+</resources>
