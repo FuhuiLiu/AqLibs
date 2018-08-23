@@ -1,3 +1,4 @@
 <resources>
     <string name="app_name">AQLibs</string>
+    <string name="org_launchActivity_path">替换为原始activity路径</string>
 </resources>
