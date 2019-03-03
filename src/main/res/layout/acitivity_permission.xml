@@ -1,0 +1,73 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent"
+    android:orientation="vertical"
+    android:paddingLeft="15.0dip"
+    android:paddingRight="15.0dip">
+
+    <TextView
+        android:id="@id/title"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="20.0dip"
+        android:text="权限请求"
+        android:textColor="@android:color/black"
+        android:textSize="24.0dip" />
+
+    <TextView
+        android:id="@+id/require_read_write"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/title"
+        android:layout_gravity="center_horizontal"
+        android:layout_marginTop="20.0dip"
+        android:text="1.需要读写外部存储以保存抓包数据。"
+        android:textColor="@android:color/black"
+        android:textSize="16.0sp" />
+
+    <TextView
+        android:id="@+id/require_camera"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/require_read_write"
+        android:layout_gravity="center_horizontal"
+        android:layout_marginTop="20.0dip"
+        android:text="2.需要摄像头权限读取配置。"
+        android:textColor="@android:color/black"
+        android:textSize="16.0sp" />
+
+    <TextView
+        android:id="@+id/require_network"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/require_camera"
+        android:layout_gravity="center_horizontal"
+        android:layout_marginTop="20.0dip"
+        android:text="3.需要网络进行请求转发。"
+        android:textColor="@android:color/black"
+        android:textSize="16.0sp" />
+
+    <TextView
+        android:id="@+id/require_cert"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/require_network"
+        android:layout_gravity="center_horizontal"
+        android:layout_marginTop="20.0dip"
+        android:text="4.需要安装根证书以用于https抓包。"
+        android:textColor="@android:color/black"
+        android:textSize="16.0sp" />
+
+    <Button
+        android:id="@+id/request"
+        android:layout_width="200.0dip"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:layout_centerHorizontal="true"
+        android:layout_marginBottom="20.0dip"
+        android:background="@drawable/bg_btn_blue"
+        android:text="开始"
+        android:textColor="@color/white_FFFFFFFF" />
+</RelativeLayout>
